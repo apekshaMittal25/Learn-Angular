@@ -14,20 +14,13 @@ export class FriendsComponent implements OnInit {
       .subscribe((response) => 
         { 
             this.friends = response.json();
-        },
-        error => console.log(error));
+        });
   }
 
-  //friends = FRIENDS;
   friends;
   public filterQuery = "";
-  selectedFriend: Friends;
 
   ngOnInit() {
-  }
-
-  onSelect(friend: Friends): void {
-    this.selectedFriend = friend;
   }
 
 }

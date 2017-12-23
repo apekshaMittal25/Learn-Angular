@@ -7,13 +7,14 @@ import {Pipe, PipeTransform} from "@angular/core";
 export class DataFilterPipe implements PipeTransform {
 
     transform(array: any[], query: string): any {
+    console.trace("Kutttttttttttttttttu");
         if (query) {
             return _.filter(array, function (row)
             {
-            	var rawData = Object.values(row);
-            	var row = rawData.toString().toLowerCase();
+            	let rawData = Object.values(row);
+            	let rowString = rawData.toString().toLowerCase();
 
-            	return row.indexOf(query.toLowerCase()) > -1;
+            	return rowString.indexOf(query.toLowerCase()) > -1;
             })
         }
         return array;

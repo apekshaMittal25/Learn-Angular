@@ -9,12 +9,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import {DataTableModule} from "angular2-datatable";
 
 import { DataFilterPipe }   from './data-filter-pipe';
+import { RemoteFriendsComponent } from './remote-friends/remote-friends.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FriendsComponent,
-    DataFilterPipe
+    DataFilterPipe,
+    RemoteFriendsComponent
   ],
   imports: [
     BrowserModule,
