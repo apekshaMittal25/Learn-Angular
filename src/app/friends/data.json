@@ -1,0 +1,7 @@
+[
+  { id: 1, name: 'Sandip1',married: 'Yes',nativePlace: 'Surat', contact:'0123', age: '28'},
+  { id: 2, name: 'Shadab',married: 'No',nativePlace: 'Bhopal', contact:'1234', age: '26'},
+  { id: 3, name: 'Apeksha',married: 'No',nativePlace: 'Mumbai', contact:'2345', age: '26'},
+  { id: 4, name: 'Shweta',married: 'Yes',nativePlace: 'Sendhwa', contact:'3456', age: '28'},
+  { id: 5, name: 'Vaibhav',married: 'No',nativePlace: 'Mumbai', contact:'4567', age: '26'},
+];

@@ -1,0 +1,59 @@
+<h2>My Friends</h2>
+<div class="form-inline">
+  <div class="form-group">
+    <label for="searchBox">Filter by name</label>
+    <input type="text" class="form-control" id="searchBox" [(ngModel)]="filterQuery" placeholder="Search for your data...">
+  </div>
+</div>
+<table class="table table-striped" [mfData]="friends | dataFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
+   <thead>
+      <tr>
+         <th>
+            <mfDefaultSorter by="id">Id</mfDefaultSorter>
+         </th>
+         <th>
+            <mfDefaultSorter by="name">Name</mfDefaultSorter>
+         </th>
+         <th>
+            <mfDefaultSorter by="married">Marrital Status</mfDefaultSorter>
+         </th>
+         <th>
+            <mfDefaultSorter by="nativePlace">Native Place</mfDefaultSorter>
+         </th>
+         <th>
+            <mfDefaultSorter by="contact">Contact</mfDefaultSorter>
+         </th>
+         <th>
+            <mfDefaultSorter by="age">Age</mfDefaultSorter>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor="let friend of mf.data">
+          <td>
+            {{friend.id}}
+         </td>
+         <td>
+            {{friend.name}}
+         </td>
+         <td>
+            {{friend.married}}
+         </td>
+         <td>
+            {{friend.nativePlace}}
+         </td>
+         <td>
+            {{friend.contact}}
+         </td>
+         <td>
+            {{friend.age}}
+         </td>
+      </tr>
+   </tbody>
+   <tfoot>
+       <tr>
+           <td colspan="6">
+               <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator> 
+           </td>
+       </tr>
+</table>
